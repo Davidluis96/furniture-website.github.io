@@ -1,0 +1,37 @@
+cambiar el fondo verde
+-----------------------
+var imgVerde = new SimpleImage("drewRobert.png");
+var fondo = new SimpleImage("dinos.png");
+
+var output = new SimpleImage(imgVerde.getWidth(), imgVerde.getHeight());
+
+for(var pixel of imgVerde.values()){
+   if(pixel.getGreen() > pixel.getBlue()+pixel.getRed()){
+       var x = pixel.getX();
+       var y = pixel.getY();
+       var fondoPuesto = fondo.getPixel(x,y);
+       output.setPixel(x,y,fondoPuesto);
+   }
+   else{
+       output.setPixel(pixel.getX(),pixel.getY(),pixel)
+   }
+}
+print(output)
+
+
+-------------------------
+diagonal de color verde
+// write your code here
+var image = new SimpleImage("duke_blue_devil.png");
+
+for (var pixel of image.values()) {
+  x = pixel.getX();
+  y = pixel.getY();
+  if (x > y) {
+    pixel.setRed(0);
+    pixel.setBlue(0);
+  }
+}
+print(image)
+
+-------------------------
