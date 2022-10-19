@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
 }
-
 body{
     background-color: #E3f2fd;
 }
@@ -33,7 +32,6 @@ nav ul{
     margin: 0 auto;
     padding: 0;
 }
-
 nav ul li{
     margin: 0 auto;
     list-style: none;
@@ -152,7 +150,6 @@ h2{
     font-size: 1.5vw;
     line-height: 32px;
 }
-
 #categorias div{
     display: flex;
     flex-wrap: wrap;
