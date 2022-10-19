@@ -16,7 +16,6 @@ document.querySelector(".fa-magnifying-glass").addEventListener('click', () => {
     }
 })
 
-
 //cambiar pantalla principal
 var imgPrincipal = document.getElementById("imagen-principal");
 var rutas = ["./img/image-banner.png","./img/mueble1.png","./img/muebleCeleste.png","./img/mueble3.png","./img/mueble4.png","./img/salaModular.png"];
