@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
 }
-
 body{
     background-color: #E3f2fd;
 }
@@ -34,7 +33,6 @@ nav ul{
     margin: 0 auto;
     padding: 0;
 }
-
 nav ul li{
     margin: 0 auto;
     list-style: none;
@@ -55,7 +53,7 @@ nav ul li a:hover{
 nav > a{
     margin: 5px auto;
 }
-#inicio{
+.menu-activo{
     background-color: #206060;
     color: #FFFFFF;
     padding: 20px 10px;
@@ -76,7 +74,6 @@ i{
     margin: 25px 10px;
     color: #202020;
     cursor: pointer;
-
 }
 i:hover{
     opacity: 0.7;
@@ -85,16 +82,29 @@ i:hover{
 .fa-user{
     color: #377070;
 }
+/* bolsa de compras */
+.bolsa-de-compras{
+    display: inline-flex;
+}
+.cantidad-producto-bolsa{
+    color: #FFFFFF;
+    align-self: end;
+    background-color: #209696;
+    border-radius: 50%;
+    padding: 2.5px 8px;
+    border: 1px solid #206060;
+    font-weight: 900;
+}
 .contenedor-seccion{
     width: 88%;
     margin: 0 auto;
 }
-main > div:nth-child(1){
+.descripcion-banner{
     width: 95%;
     height: 402px;
     margin: 30px auto;
 }
-main > div > img{
+.descripcion-banner > img{
     float: right;
     width: 620px;
     height: 402px;
@@ -129,39 +139,47 @@ h2{
     margin: 30px 0;
     padding: 10px 0;
 }
-.destacados{
+.seccion-destacados{
     width: 88%;
     margin: 0 auto;
 }
+.contenedor-destacados{
+    display: flex;
+    flex-direction: column;
+}
 .row{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    column-gap: 20px;
+    column-gap: 34px;
+    row-gap: 34px;
     width: 100%;
     justify-content: center;
 }
 .col-md-3{
-    width: 30%;
-}
-.contenedor-comentario{
-    height: 307px;
-    border: 3px solid #c4c4c4;
-    padding: 15px 0;
-    background-color: #F7F9F9;
     border-radius: 10px;
+    border: 2px solid #c4c4c4;
+    background-color: #F7F9F9;
+    padding: 30px 25px;
+    width: 31.4%;
+}
+.col-md-3:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-out;
 }
 .contenedor-comentario-items{
     display: flex;
 }
-.contenedor-foto{
+.contenedor-foto-comentario{
     align-self: center;
 }
-.contenedor-foto > img{
+.contenedor-foto-comentario > img{
     padding: 0 10px;
 }
 .comentario-encabezado *{
     margin: 5px;
     padding: 2px;
+    font-size: 18px;
 }
 .comentario-encabezado > p{
     color: #999;
@@ -171,20 +189,14 @@ h2{
     font-size: 20px;
 }
 .contenedor-opinion{
-    padding: 10px 20px;
+    padding: 10px 0;
     text-align: justify;
     font-style: italic;
-    font-size: 18px;
-
+    font-size: 20px;
+    line-height: 27px;
 }
-.col-md-4{
-    background-color: #F7F9F9;
-    padding: 30px 0;
-}
-.col-md-4{
-    border-radius: 10px;
-    border: 2px solid #c4c4c4;
-    width: 33%;
+.tam-img-opiniones{
+    filter: invert(27%) sepia(80%) saturate(384%) hue-rotate(131deg) brightness(93%) contrast(86%)
 }
 .titulo-destacados{
     text-align: center;
@@ -197,9 +209,8 @@ h2{
     margin: 0 auto;
     text-align: center;
     font-size: 1.5vw;
-    line-height: 32px;
+    line-height: 30px;
 }
-
 #categorias div{
     display: flex;
     flex-wrap: wrap;
@@ -213,12 +224,13 @@ h2{
     border: 2px solid #c4c4c4;
     border-radius: 10px;
 }
-.leyenda{
+
+.leyenda-categorias{
     padding: 0 5px;
     font-size: 1.3em;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
-.leyenda:hover{
+.leyenda-categorias:hover{
     cursor: pointer;
     box-shadow: inset 100px 0 0 10px #414344;
     color: white;
@@ -227,47 +239,52 @@ h2{
     margin: 0 auto;
     width: 88%;
 }
-#row{
+.col-md-4{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 34px;
-    row-gap: 30px;
-    justify-content: center;
-}
-#nuestros-productos .col-md-5{
-    display: contents;
     flex-wrap: wrap;
     text-align: center;
     margin: 0 auto;
 }
-.contenedor-items{
+.contenedor-articulo{
+    display: flex;
+    flex-direction: column;
     min-width: 300px;
-    border: 3px solid #c4c4c4;
+    border: 2px solid #c4c4c4;
     padding: 15px 0;
     background-color: #F7F9F9;
-    border-radius: 10px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.tam-image{
+.contenedor-foto-articulo > img{
     width: 16vw;
     cursor: pointer;
 }
-.tam-image:hover{
+.contenedor-foto-articulo > img:hover{
     transform: scale(1.2);
 }
-
-.col-md-5 .contenedor-items > p:nth-child(2){
-    padding: 10px 0;
+.contenedor-descripcion-articulo > p{
+    padding: 5px 0;
     text-align: center;
-    font-weight: bold;
-    font-family: 'Arial Narrow', Arial, sans-serif;
 }
-.col-md-5 .contenedor-items > p:nth-child(3){
+.titulo-articulo{
+    padding: 5px 0;
+    font-size: 22px;
+}
+.referencia-articulo{
     color: rgb(145, 173, 173);
-    font-size: 18px;
-    text-align: center;
 }
-.btn-añadir-carrito{
+.precio-moneda{
+    color: #209696;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 3px;
+}
+.precio-articulo{
+    color: #209696;
+    font-size: 18px;
+    font-weight: 600;
+}
+.btn-agregar-articulo{
     margin: 15px auto;
     border: 2px solid #959494;
     border-radius: 20px;
@@ -278,17 +295,19 @@ h2{
     font-weight: bold;
     cursor: pointer;
 }
-.btn-añadir-carrito:hover{
+.comprar{
+    width: 150px;
+}
+.btn-agregar-articulo:hover{
     border: 2px solid #565656;
     background-color: #739b9b
 }
 
-.btn-añadir-carrito:active {
+.btn-agregar-articulo:active {
     background-color: #739b9b;
     box-shadow: 0 4px #666;
     transform: translateY(4px);
   }
-
 .fa-star{
     color: #206060;
 }
@@ -296,7 +315,6 @@ h2{
     font-size: 1.5em;
     text-align: center;
 }
-
 #contenedor-ubicacion{
     display: flex;
     column-gap: 10px;
@@ -304,54 +322,116 @@ h2{
     justify-content: center;
 }
 #contenedor-iframe{
-    border: 1px solid #202020;
-    width: 70vw;;
+    width: 62%;
+}
+.mapouter{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
 
+.contenedor-ubicacion{
+    margin-bottom: 18px;
+    border-radius: 10px;
 }
-#contenedor-form{
-    border: 1px solid #202020;
-    background-color: #E3f2fd;
-    width: 16vw;
-}
-iframe{
-width: 100%;
-}
-form{
+#titulo-ubicaciones{
+    padding-bottom: 15px;
+    font-size: 22px;
     text-align: center;
-    margin: 0 auto;
 }
-form > label{
-    font-size: 1.3em;
+.titulo-ubicacion{
+    background-color: #206060;
+    color: #FFFFFF;
+    padding: 12px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
-form > input, form > textarea{
-    display: block;
-    margin: 10px auto;
-    text-align: center;
-    padding: 12px 0;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    width: 80%;
-    
+.titulo-detalles-ubicacion{
+    font-size: 15px;
 }
-form > button{
-    display: block;
-    margin: 10px auto;
+.detalles-ubicacion{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 17px;
+    padding: 10px;
+    background-color: #F7F9F9;
+    width: 480px;
+    border: 1px solid #c4c4c4;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
+
 footer{
+    background-color: #F7F9F9;
     margin-top: 50px;
     padding: 20px;
-    background-color: #F7F9F9;
     text-align: center;
 }
-h3{
-    font-size: 2.2vw;
-    padding: 20px;
+footer .contenedor-secciones-footer{
+    display: flex;
+    column-gap: 30px;
+    width: 90%;
+    margin: 35px auto;
+    text-align: left;
 }
-footer p{
-    display: inline-block;
-    padding: 20px;
+footer .titulo-seccion-footer{
+    text-transform: uppercase;
+    font-size: 20px;
+    border-bottom: 3px solid #209696;
+    margin-bottom: 15px;
+    padding: 5px 0;
+}
+footer .cuerpo-seccion-footer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: left;
+}
+footer .cuerpo-seccion-footer > p{
+    font-size: 17px;
+}
+
+footer .cuerpo-seccion-footer #como-comprar{
+    font-weight: bold;
     font-size: 1.3em;
 }
-footer p i{
-    padding: 20px;
+footer .footer-comunicacion{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    width: 39%;
+    margin-top: 45px;
+    text-align: right;
+}
+footer .footer-comunicacion #titulo-subscribir-corrreo{
+    text-align: right;
+}
+
+footer #input-subscribirse-footer{
+    width: 90%;
+    border-radius: 3px;
+    padding: 10px 20px;
+    border: 1px solid #999;
+}
+footer #contenedor-terminos-condiciones{
+    display: flex;
+    text-align: right;
+    column-gap: 5px;
+}
+footer .fa-brands{
+    font-size: 2.5em;
+}
+
+.fa-envelope{
+    margin: 0;
+    font-size: 38px;
+    vertical-align: top;
+}
+#creditos{
+    width: 90%;
+    margin: 0 auto;
+    text-align: right;
+}
+.negrita-subrayado    {
+    text-decoration: underline;
+    font-weight: bold;
 }

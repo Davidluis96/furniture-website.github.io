@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/pago.css">
+    <script src="https://kit.fontawesome.com/1c5b7046a8.js" crossorigin="anonymous"></script>
+    <title>Pago</title>
+</head>
+<body>
+    <header>
+        <div class="contenedor-pasos">
+            <div id="contenedor-volver">
+                <a href="productos.html"><i class="fa-solid fa-left-long"></i>&nbsp;Volver a la Tienda</a>
+            </div>
+            <div>
+                <img id="logo" src="./img/logoMublure.png" width="140" height="100" alt="logo-mueble">
+            </div>
+        </div>
+        
+        <div class="contenedor-cabecera">
+            <span><i class="fa-sharp fa-solid fa-circle-check"></i>Bolsa de Compras</span>
+            <span><i class="fa-sharp fa-solid fa-circle-check"></i>Detalle de Orden</span>
+            <span><span id="icono-tres">3</span> Pago</span>
+        </div>
+    </header>
+    <main>
+        <div class="seccion-pago">
+            <div class="contenedor-informacion-pagador">
+                <div id="titulo-info-pagador"><h3>Información del Pagador</h3></div>
+                <form action="">
+                    <div class="contenedor-tipo-persona">
+                        <div>
+                            <input type="radio" name="persona" checked>
+                            <label for="persona">Persona Natural</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="persona">
+                            <label for="persona">Persona Jurídica</label>
+                        </div>
+                    </div>
+                    <div class="contenedor-documento">
+                        <div>
+                            <label for="tipo-documento">Tipo de Documento:</label>
+                            <select name="" id="tipo-documento" class="campo-documento">
+                                <option value=""></option>
+                                <option value="cc">Cédula</option>
+                                <option value="ce">Cédula Extranjería</option>
+                                <option value="ps">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="nombre">Número de Documento</label>
+                            <input type="number" id="nombre" class="campo-documento">
+                        </div>
+                    </div>
+                   
+                    <div class="contenedor-datos-formulario">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre">
+                    </div>
+                    <div class="contenedor-datos-formulario">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido">
+                    </div>
+                    <div class="contenedor-datos-formulario">
+                        <label for="telefono">Telefono</label>
+                        <input type="number" id="telefono">
+                    </div>
+                    <div class="contenedor-datos-formulario">
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo">
+                    </div>
+                </form>
+                <div id="contenedor-ayuda">
+                    <p>¿Necesitas Ayuda?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="seccion-resumen-compra">
+            <div>
+                <h3>Resumen de Compra</h3>  
+            </div>
+            <div>
+                <p id="resumen-cantidad-items"> 3 Productos</p>
+            </div>
+            <div class="contenedor-items">
+                <div class="item">
+                    <div class="contenedor-imagen">
+                        <img src="./img/salaModular.png" alt="" width="180" height="115">
+                    </div>
+                    <div class="detalle-item">
+                        <p>$ 2.580</p>
+                        <p>Sofa Modular Gris</p>
+                        <p>Cantidad: 1</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="contenedor-imagen">
+                        <img src="./img/muebleCeleste.png" alt="" width="180" height="115">
+                    </div>
+                    <div class="detalle-item">
+                        <p>$ 1.792</p>
+                        <p>Sofa Tesalo Celeste </p>
+                        <p>Cantidad: 2</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="contenedor-costos">
+                    <div class="contenedor-detalles-costos">
+                        <p>Subtotal</p>
+                        <p>$ 4.372</p>
+                    </div>
+                    <div class="contenedor-detalles-costos">
+                        <p>IVA</p>
+                        <p>$ 830,7</p>
+                    </div>
+                    <div class="contenedor-detalles-costos">
+                        <p>Envío</p>
+                        <p>Gratis</p>
+                    </div>
+                    <div id="pago-total" class="contenedor-detalles-costos">
+                        <p>Total a Pagar</p>
+                        <p>$ 6.9994,7</p>
+                    </div>
+                    <div class="contenedor-detalles-costos">
+                        <p>Cupón de Descuento</p>
+                        <input id="input-cupon-descuento" type="text">
+                    </div>
+                </div>
+                <div class="contenedor-btn-realizar-pedido">
+                    <button>Pagar</button>
+                    <p>Envío y Devoluciones de Cortesía</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
