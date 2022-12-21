@@ -2,7 +2,7 @@
 
 ### :hammer_and_wrench: Vista Principal:
 <div id = "header" align = "center">
-  <img border= "3px" src = "https://raw.github.com/Davidluis96/furniture-website.github.io/tree/main/sample/mublure1.png" width="400" height="400">
+  ![image text]"https://raw.github.com/Davidluis96/furniture-website.github.io/tree/main/sample/mublure1.png"
  </div>
  
  ### :hammer_and_wrench: Agregar Productos:
