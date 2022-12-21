@@ -1,0 +1,102 @@
+.cabecera-fija{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.contenedor-bolsa-compras{
+    display: none;
+    width: 400px;
+    max-height: 584px;
+    position: fixed;
+    right: 10px;
+    top: 170px;
+    overflow: auto;
+    z-index: 1;
+}
+.encabezado-bolsa-compras{
+    display: flex;
+    text-align: center;
+    border: 2px solid #609292;
+}
+.titulo-bolsa-compras{
+    text-align: center;
+    font-weight: bold;
+    color: #206060;
+    font-size: 20px;
+    background-color: #F7F9F9;
+    width: 80%;
+}
+.salir-bolsa-compras{
+    width: 20%;
+    color: #FFFFFF;
+    background-color: #209696;
+    font-size: 18px;
+}
+.resumen-bolsa-compras{
+    display: flex;
+    text-align: center;
+    border-left: 2px solid #609292;
+    border-right: 2px solid #609292;
+    border-bottom: 2px solid #609292;
+    text-align: center;
+    font-weight: bold;
+    color: #206060;
+    font-size: 20px;
+    background-color: #F7F9F9;
+}
+.titulo-total-compra{
+    width: 40%;
+}
+.valor-bolsa-compras{
+    text-align: center;
+    background-color: #209696;
+    color: #FFFFFF;
+    width: 60%;
+}
+#nuestros-productos{
+    margin-top: 200px;
+}
+.contenedor-detalle-producto{
+    display: flex;
+    height: 117px;
+    background-color: #F7F9F9;
+    border-bottom: 2px solid #609292;
+    border-right: 2px solid #609292;
+    border-left: 2px solid #609292;
+}
+.contenedor-detalle-producto > img{
+    width: 180px;
+    padding-top: 10px;
+}
+.contenedor-detalle-producto > div{
+    padding-top: 10px;
+    width: 166px;
+}
+.eliminar-producto{
+    padding: 10px;
+    width: 53px;
+    color: #209292;
+}
+#link-pago:hover{
+    background-color: white;
+    color: #209696;
+    padding: 8px;
+    border-radius: 7px;
+}
+.contenedor-btn-continuar-pago{
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #609292;
+    border-right: 2px solid #609292;
+    border-left: 2px solid #609292;
+    text-align: center;
+    background-color: #209292;
+    padding: 10px;
+}
+.contenedor-btn-continuar-pago > a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bolder;
+    text-shadow: 0 0 55px black;
+}
