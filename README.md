@@ -7,10 +7,10 @@
  
  ### :hammer_and_wrench: Agregar Productos:
  <div id = "header" align = "center">
-  <img border= "3px" src = "https://drive.google.com/file/d/1cOYOwhwwd1osHg_T0ad9L8WIZFBCxuCe/view?usp=share_link" width="400px" height="400px">
+  <img border= "3px" src = "https://github.com/Davidluis96/furniture-website.github.io/blob/e5e9ecfca6867a4b5c97451aa3aa7161f78e2a3c/sample/mublure2.png" width="800" height="400">
  </div>
  
   ### :hammer_and_wrench: Pasarela de Pago:
  <div id = "header" align = "center">
-  <img border= "3px" src = "https://drive.google.com/file/d/1jCMGVoTouRNTBAgo0ZelI8yuG6SmHnXs/view?usp=share_link" width="400px" height="400px">
+  <img border= "3px" src = "https://github.com/Davidluis96/furniture-website.github.io/blob/e5e9ecfca6867a4b5c97451aa3aa7161f78e2a3c/sample/mublure3.png" width="800" height="400">
  </div>
