@@ -1,4 +1,5 @@
-# furniture-website https://davidluis96.github.io/furniture-website.github.io/
+# furniture-website 
+https://davidluis96.github.io/furniture-website.github.io/
 
 ### :hammer_and_wrench: Vista Principal:
 <div id = "header" align = "center">
