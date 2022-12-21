@@ -45,17 +45,30 @@ function sucesiones(){
 
     for (let i = 0; i < 3; i++) {
         itemsNav[i].addEventListener('mouseover', () => {
-        itemInicio.style = "color: #202020; background-color: #FFFFFF";
+        itemInicio.style = "color: #FFFFFF; background-color: #206060;"
         }); 
     }
     
     for (let i = 0; i < 3; i++) {
-        itemsNav[i].addEventListener('mouseout', (event) => {
+        itemsNav[i].addEventListener('mouseout', () => {
             itemInicio.style = "color: #FFFFFF; background-color: #206060; transition: 2s ease-out";
-
         });
     }
-    
+}());
 
-    
+(function(){
+    "use strict"
+    let contenedorNombreCategoria = document.getElementsByClassName("contenedor-nombre-categoria");
+    let leyendaCategoria = document.getElementsByClassName("leyenda-categorias");
+
+    for (let i = 0; i < contenedorNombreCategoria.length; i++) {
+        contenedorNombreCategoria[i].addEventListener('mouseover', () => {
+            leyendaCategoria[i].style = "cursor: pointer;box-shadow: inset 100px 0 0 10px #414344;color: white;"
+        });
+    }
+    for (let i = 0; i < contenedorNombreCategoria.length; i++) {
+        contenedorNombreCategoria[i].addEventListener('mouseout', () => {
+            leyendaCategoria[i].removeAttribute("style")
+        });
+    }
 }());
