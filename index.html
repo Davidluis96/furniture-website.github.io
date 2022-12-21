@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,9 @@
     <title>Mublure</title>
     <script src="https://kit.fontawesome.com/1c5b7046a8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav>
@@ -18,7 +20,7 @@
             </div>
             <div>
                 <ul>
-                    <li><a id="inicio" href="index.html">Inicio</a></li>
+                    <li><a href="index.html" id="inicio" class="items-navbar menu-activo">Inicio</a></li>
                     <li><a href="./productos.html" class="items-navbar">Productos</a></li>
                     <li><a href="#opiniones" class="items-navbar">Opiniones</a></li>
                     <li><a href="#contacto" class="items-navbar">Contáctenos</a></li>
@@ -26,13 +28,16 @@
             </div>
             <div id="contenedor-iconos">
                 <i title = "Buscar" class="fa-solid fa-magnifying-glass fa-lg"></i>
-                <i title="Bolsa de Compras" class="fa-solid fa-bag-shopping fa-lg" ></i>
+                <span class="bolsa-de-compras">
+                    <i title="Bolsa de Compras" class="fa-solid fa-bag-shopping fa-lg" ></i>
+                    <span class="cantidad-producto-bolsa">0</span>
+                </span>
                 <a title = "Login" href="#"><i class="fa-solid fa-user fa-lg"></i></a>
             </div>
         </nav>
     </header>
     <main>
-        <div>
+        <div class="descripcion-banner">
             <h1>
                 Logra el confort que te mereces con nuestros muebles
                 <button onclick="location.href = 'productos.html'" >Compra Ahora</button>
@@ -41,130 +46,308 @@
             <img id="imagen-principal" src="./img/image-banner.png" width="300" alt="">
         </div>
 
-        <div class="destacados">
+        <div class="seccion-destacados">
             <div class="row">
-                <div class="col-md-4">
-                    <p class="titulo-destacados">Calidad Insuperable</p>
-                    <p class="descripcion-destacados">Todas nuestras productos se fabrican con los mejores materiales del mundo.</p>
+                <div class="col-md-3">
+                    <div class="contenedor-destacados">
+                        <p class="titulo-destacados">Calidad Insuperable</p>
+                        <p class="descripcion-destacados">Todas nuestras productos se fabrican con los mejores materiales del mundo.</p>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <p class="titulo-destacados">Envío gratis</p>
-                    <p class="descripcion-destacados">Todos nuestros productos no tienen costo de envío. No importa donde vivas!</p>
+                <div class="col-md-3">
+                    <div class="contenedor-destacados">
+                        <p class="titulo-destacados">Envío gratis</p>
+                        <p class="descripcion-destacados">Todos nuestros productos no tienen costo de envío. No importa donde vivas!</p>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <p class="titulo-destacados">Productos Garantizados</p>
-                    <p class="descripcion-destacados">Nosotros ofrecemos garantía de 3 años post-venta para maximizar tu satisfación.</p>
+                <div class="col-md-3">
+                    <div class="contenedor-destacados">
+                        <p class="titulo-destacados">Productos Garantizados</p>
+                        <p class="descripcion-destacados">Nosotros ofrecemos garantía de 3 años post-venta para maximizar tu satisfación.</p>
+                    </div>    
                 </div>
             </div>
         </div>
-        
-
+    
         <div id="categorias" class="contenedor-seccion">
             <h2>Categorías</h2>
             <div>
-                <span><i class="fa-solid fa-chair fa-2xl"></i><span class="leyenda">Sillas</span></span>
-                <span><i class="fa-solid fa-couch fa-2xl"></i><span class="leyenda">Sofas</span></span>
-                <span><i class="fa-solid fa-archway fa-2xl"></i><span class="leyenda">Mesas</span></span>
-                <span><i class="fa-solid fa-box-archive fa-2xl"></i><span class="leyenda">Cajas</span></span>
-                <span><i class="fa-solid fa-bed fa-2xl"></i><span class="leyenda">Camas</span></span>
-                <span><i class="fa-brands fa-atlassian fa-2xl"></i><span class="leyenda">Soportes</span></span>
+                <span class="contenedor-nombre-categoria"><i class="fa-solid fa-chair fa-2xl"></i><span class="leyenda-categorias">Sillas</span></span>
+                <span class="contenedor-nombre-categoria"><i class="fa-solid fa-couch fa-2xl"></i><span class="leyenda-categorias">Sofas</span></span>
+                <span class="contenedor-nombre-categoria"><i class="fa-solid fa-archway fa-2xl"></i><span class="leyenda-categorias">Mesas</span></span>
+                <span class="contenedor-nombre-categoria"><i class="fa-solid fa-box-archive fa-2xl"></i><span class="leyenda-categorias">Cajas</span></span>
+                <span class="contenedor-nombre-categoria"><i class="fa-solid fa-bed fa-2xl"></i><span class="leyenda-categorias">Camas</span></span>
+                <span class="contenedor-nombre-categoria"><i class="fa-brands fa-atlassian fa-2xl"></i><span class="leyenda-categorias">Soportes</span></span>
             </div>
         </div>
         
         <div id="nuestros-productos" class="contenedor-seccion">
             <h2 id="producto">Productos Destacados<i class="fa-solid fa-star"></i></h2>
-            <div id="row">
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/mesa-redonda.png" class="tam-image" width="200" height="220" alt="Mesedora"><p>Mesa Sencilla</p><p>$&nbsp;899</p><p>Ref. 122463</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/silla.png" class="tam-image" width="200" height="220" alt="Silla Tradicional"><p>Silla Tradicional</p><p>$&nbsp;592</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/mueble1.png" class="tam-image" width="200" height="220" alt="Mueble Plateado"><p>Mueble Plateado</p><p>$&nbsp;1.296</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/muebleCeleste.png" class="tam-image" width="200" height="220" alt="mueble cesleste"><p>Mueble Celeste</p><p>$&nbsp;1.792</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <!-- <div class="col-md-5"><div class="contenedor-items"><img src="./img/sofaNegro.png" class="tam-image" width="200" height="220" alt="sofaNegro"><p>Sofa Negro</p><p>$&nbsp;1.380</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/cama.png" class="tam-image" width="200" height="220" alt="cama"><p>Cama Doble</p><p>$&nbsp;1.639</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/zapatero.png" class="tam-image" width="200" height="220" alt="zapatero"><p>Zapatero Recibidor</p><p>$&nbsp;625</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/salaModular.png" class="tam-image" width="200" height="220" alt="salaModular"><p>Sala Modular</p><p>$&nbsp;2.580</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div> -->
-            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contenedor-articulo">
+                        <div class="contenedor-foto-articulo">
+                            <img src="./img/mesa-redonda.png" width="200" height="220" alt="Mesedora">
+                        </div>
+                        <div class="contenedor-descripcion-articulo">
+                            <h4 class="titulo-articulo">Mesa Sencilla</h4>
+                            <p class="referencia-articulo">Ref. 122463</p>
+                            <p class="precio-articulo">$&nbsp;899</p>
+                        </div>
+                        <div class="contenedor-btn-articulo">
+                            <button onclick="location.href = 'productos.html'" class="comprar btn-agregar-articulo">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-articulo">
+                        <div class="contenedor-foto-articulo">
+                            <img src="./img/silla.png" width="200" height="220" alt="Silla Tradicional">
+                        </div>
+                        <div class="contenedor-descripcion-articulo">
+                            <h4 class="titulo-articulo">Silla Tradicional</h4>
+                            <p class="referencia-articulo">Ref. 122463</p>
+                            <p class="precio-articulo">$&nbsp;592</p>
+                        </div>
+                        <button onclick="location.href = 'productos.html'" class="comprar btn-agregar-articulo">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-articulo">
+                        <div class="contenedor-foto-articulo">
+                            <img src="./img/mueble1.png" width="200" height="220" alt="Mueble Plateado">
+                        </div>
+                        <div class="contenedor-descripcion-articulo">
+                            <h4 class="titulo-articulo">Mueble Plateado</h4>
+                            <p class="referencia-articulo">Ref. 122463</p>
+                            <p class="precio-articulo">$&nbsp;1.296</p>
+                        </div>
+                        <button onclick="location.href = 'productos.html'" class="comprar btn-agregar-articulo">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-articulo">
+                        <div class="contenedor-foto-articulo">
+                            <img src="./img/muebleCeleste.png" width="200" height="220" alt="mueble cesleste">
+                            <div class="contenedor-descripcion-articulo">
+                                <h4 class="titulo-articulo">Mueble Celeste</h4>
+                                <p class="referencia-articulo">Ref. 122463</p>
+                                <p class="precio-articulo">$&nbsp;1.792</p>
+                            </div>
+                            <button onclick="location.href = 'productos.html'" class="comprar btn-agregar-articulo">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>    
         </div>
-        <div id="nuestros-productos" class="contenedor-seccion">
-            <h2 id="opiniones">Opiniones</i></h2>
-            <div id="row">
-                <div class="col-md-4">
-                    <div class="contenedor-items">
-                        <img src="./img/user-solid.svg" class="tam-img-opiniones" width="100" height="220" alt="Mueble Plateado">
-                        <p>Usuario 1</p>
-                        <p>"Excelente silla. Duré toda la pandemia sentado estudiando y trabajando, eso me generò varios problemas de espalda. Cuando remplacé mi vieja silla con esta el dolor disminuyó bastante. Totalmente recomendada"</p>
-                        <div>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
+
+        <div id="seccion-opiniones" class="contenedor-seccion">
+            <h2 id="opiniones">Opiniones</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="contenedor-comentario">
+                        <div class="contenedor-comentario-items">
+                            <div class="contenedor-foto-comentario">
+                                <img src="./img/user-solid.svg" class="tam-img-opiniones" width="100" height="80" alt="Mueble Plateado">
+                            </div>
+                            <div class="comentario-encabezado">
+                                <h5>Usuario 1</h5>
+                                <p>24/03/2021</p>
+                                <div>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="contenedor-opinion">
+                            <p>"Excelente silla. Duré toda la pandemia sentado estudiando y trabajando, eso me generò varios problemas de espalda. Cuando remplacé mi vieja silla con esta el dolor disminuyó bastante. Totalmente recomendada"</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="contenedor-items">
-                        <img src="./img/user-solid.svg" class="tam-img-opiniones" width="100" height="220" alt="Mueble Plateado">
-                        <p>Usuario 2</p>
-                        <p>"Considero muy bueno el Escritorio teniendo en cuenta el precio, es comodo para espacios pequeños, es totalmente igual a la foto, Llegó super rápido a mi domicilio"</p>
-                        <div>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
+                <div class="col-md-3">
+                    <div class="contenedor-comentario">
+                        <div class="contenedor-comentario-items">
+                            <div class="contenedor-foto-comentario">
+                                <img src="./img/user-solid.svg" class="tam-img-opiniones" width="100" height="80" alt="Mueble Plateado">
+                            </div>
+                            <div class="comentario-encabezado">
+                                <h5>Usuario 2</h5>
+                                <p>18/03/2022</p>
+                                <div>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="contenedor-opinion">
+                            <p>"Considero muy bueno el Escritorio teniendo en cuenta el precio, es comodo para espacios pequeños, es totalmente igual a la foto, Llegó super rápido a mi domicilio"</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="contenedor-items">
-                        <img src="./img/user-solid.svg" class="tam-img-opiniones" width="100" height="220" alt="Mueble Plateado">
-                        <p>Usuario 3</p>
-                        <p>"Este cama me ha gustado mucho. Yo peso 70 kg y la verdad ha sido una maravilla. Mi espalda me lo ha agradecido. Para dormir con alguien también es ideal".</p>
-                        <div>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
+                <div class="col-md-3">
+                    <div class="contenedor-comentario">
+                        <div class="contenedor-comentario-items">
+                            <div class="contenedor-foto-comentario">
+                                <img src="./img/user-solid.svg" class="tam-img-opiniones" width="100" height="80" alt="Mueble Plateado">
+                            </div>
+                            <div class="comentario-encabezado">
+                                <h5>Usuario 3</h5>
+                                <p>19/06/2021</p>
+                                <div>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="contenedor-opinion">
+                            <p>"Esta cama me ha gustado mucho. Yo peso 70 kg y la verdad ha sido una maravilla. Mi espalda me lo ha agradecido. Para dormir con alguien también es ideal".</p>
                         </div>
                     </div>
-                </div>
-                
+                </div>         
             </div>
         </div>
         <div  class="contenedor-seccion">
-            <h2>Ubicación</h2>
+            <h2>Nuestras Tiendas</h2>
             <div id="contenedor-ubicacion">
                 <div id="contenedor-iframe">
-                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=san%20diego,%20medellin&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <div class="mapouter"><div class="gmap_canvas">
+                            <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=centro comercial santafé&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div><style>.mapouter{position:relative;text-align:right;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:452px;}.gmap_iframe {height:452px!important;}</style>
+                        </div>
                 </div>
-                <div id="contenedor-form">
-                    <form action="#">
-                        <h3>Comentarios</h3>
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre">
-                        <label for="correo">Correo</label>
-                        <input type="email" id="correo">
-                        <label for="comentario">Comentario</label>
-                        <textarea rows="4" cols="25" id="comentario" placeholder="Deja tu comentario..."></textarea>
-                        <button onclick="submit">Enviar</button>
-                    </form>
+                <div id="contenedor-ubicaciones">
+                    <div>
+                        <h3 id="titulo-ubicaciones">Ubica Tu Tienda Más Cercana</h3>
+                    </div>
+                    <div id="ubicacion1" class="contenedor-ubicacion">
+                        <div class="titulo-ubicacion">
+                            <h4>Mublure Mayorca</h4>
+                        </div>
+                        <div class="detalles-ubicacion">
+                            <div>
+                                <h6 class="titulo-detalles-ubicacion">Horario</h6> 
+                                <p>Lun - Vie 8:00 am - 6:00 pm</p>
+                                <p>Sáb - Dom 9:00 am - 8:00 pm</p>
+                            </div>
+                            <div>
+                                <h6 class="titulo-detalles-ubicacion">Correo</h6>
+                                <p>mublure.ccsantafe@mublure.co</p>
+                            </div>
+                            <div>
+                                <h6 class="titulo-detalles-ubicacion">Telefono</h6> 
+                                <p>(604) 362 5412</p>
+                            </div>
+                            <div>
+                                <h6 class="titulo-detalles-ubicacion">Dirección</h6> 
+                                <p>Carrera 43A #7-170, El Poblado</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ubicacion2" class="contenedor-ubicacion">
+                        <div class="titulo-ubicacion">
+                            <h4>Mublure Puerta del Norte</h4>
+                        </div>
+                        <div class="detalles-ubicacion">
+                            <div>
+                                <h6 class="titulo-detalles-ubicacion">Horario</h6> 
+                                <p>Lun - Vie 8:00 am - 6:00 pm</p>
+                                <p>Sáb - Dom 9:00 am - 8:00 pm</p>
+                            </div>
+                            <div>
+                                <h6 class="titulo-detalles-ubicacion">Correo</h6>
+                                <p>mublure.ccnorte@mublure.co</p>
+                            </div>
+                            <div>
+                                <h6 class="titulo-detalles-ubicacion">Telefono</h6> 
+                                <p>(604) 252 5418</p>
+                            </div>
+                            <div>
+                                <h6 class="titulo-detalles-ubicacion">Dirección</h6> 
+                                <p>Autopista Nte. #34-67, Bello</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>    
         </div>
     </main>
     <footer>
-        <div>
-            <div>
-                <h2><a id="contacto">Contáctanos</a></h2>
-                    <p><i class="fa-brands fa-facebook-square fa-2xl"></i>Facebook</p>
-                    <p><i class="fa-brands fa-whatsapp-square fa-2xl"></i>Whatsapp</p>
-                    <p><i class="fa-brands fa-instagram-square fa-2xl"></i>Instagram</p>
+        <div class="contenedor-secciones-footer">
+            <div class="footer-contactanos">
+                <div>
+                    <h6 id="contacto" class="titulo-seccion-footer">Contáctanos</h6>
+                </div>   
+                <div class="cuerpo-seccion-footer">
+                    <p>Tiendas</p>
+                    <p>Servicio al cliente</p>
+                    <p>Preguntas Frecuentes</p>
+                    <p>Sigue tus pedidos</p>
+                </div>
             </div>
-            <p> &copy; Todos derechos reservados 2022 </p> 
+            <div class="footer-acerca-de">
+                <div>
+                    <h6 class="titulo-seccion-footer">Acerca de Mublure</h6>
+                </div>
+                <div class="cuerpo-seccion-footer">
+                    <p>Quienes Somos</p>
+                    <p>Responsabilidad Social</p>
+                    <p>Trabaja con Nosotros</p>
+                    <p>Programa Factor Sorpresa</p>
+                    <p>Tu primer Hogar</p>
+                    <p>Marcas Propias</p>
+                    <p class="negrita-subrayado">Día sin IVA</p>
+                </div>
+            </div>
+            <div class="footer-permitenos-ayudarte">
+                <div>
+                    <h6 class="titulo-seccion-footer">Permítenos Ayudarte</h6>
+                </div>
+                <div class="cuerpo-seccion-footer">
+                    <p class="negrita-subrayado">Términos y Condiciones</p>
+                    <p>Estado de los Pedidos</p>
+                    <p>Ventas Institucionales</p>
+                    <p>Superintendencia de Industria y Comercio SIC</p>
+                    <p id="como-comprar">Cómo Comprar</p>
+                </div>
+            </div>
+            <div class="footer-comunicacion">
+                <div id="titulo-subscribir-corrreo">
+                    <p>Recibe Novedadades, Ofertas y Catálogos</p>
+                </div>
+                <div>
+                    <input id="input-subscribirse-footer" type="email" placeholder="E-mail">
+                    <i class="fa-solid fa-envelope"></i> 
+                </div>
+                <div id="contenedor-terminos-condiciones">
+                        <span>Acepto <span class="negrita-subrayado">Términos y Condiciones</span> y Autorizo el Tratamiento de <span class="negrita-subrayado">Datos Personales</span></span>
+                        <input type="checkbox"> 
+                </div>
+                <div>
+                    <i class="fa-brands fa-facebook-square fa-2xl"></i>
+                    <i class="fa-brands fa-whatsapp-square fa-2xl"></i>
+                    <i class="fa-brands fa-youtube-square fa-2xl"></i>
+                    <i class="fa-brands fa-instagram-square fa-2xl"></i>
+                    <i class="fa-brands fa-pinterest-square fa-2xl"></i>
+                </div>
+            </div>
         </div>
+        <div id="creditos">
+            <p> &copy; Todos derechos reservados 2022</p>
+            <p>Elaborado por LC</p> 
+        </div>
+        
     </footer>
     <script src="./js/script.js"></script>
 </body>
 </html>
-

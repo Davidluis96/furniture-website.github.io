@@ -4,63 +4,135 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mublure</title>
     <script src="https://kit.fontawesome.com/1c5b7046a8.js" crossorigin="anonymous"></script>
-    <script src="./js/script.js" defer></script>
+    <script src="./js/producto.js" defer></script>
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/productos.css">
 </head>
 <body>
-    <header>
+    <header class="cabecera-fija">
         <nav>
             <div>
                 <a href="index.html">
-                    <img id="logo" src="./img/logoMublure.png" width="200" height="140" alt="logo-mueble">
+                    <img id="logo" src="./img/logoMublure.png" class="foto-articulo" width="200" height="140" alt="logo-mueble">
                 </a>
             </div>
             <div>
                 <ul>
-                    <li><a id="inicio" href="index.html">Inicio</a></li>
-                    <li><a href="./productos.html" class="items-navbar">Productos</a></li>
-                    <li><a href="#" class="items-navbar">Opiniones</a></li>
+                    <li><a href="index.html" id="inicio">Inicio</a></li>
+                    <li><a href="./productos.html" id="productos" class="items-navbar">Productos</a></li>
+                    <li><a href="index.html#opiniones" class="items-navbar">Opiniones</a></li>
                     <li><a href="#contacto" class="items-navbar">Contáctenos</a></li>
                 </ul>
             </div>
             <div id="contenedor-iconos">
                 <i title = "Buscar" class="fa-solid fa-magnifying-glass fa-lg"></i>
-                <i title="Bolsa de Compras" class="fa-solid fa-bag-shopping fa-lg" ></i>
+                <span class="bolsa-de-compras">
+                    <i title="Bolsa de Compras" class="fa-solid fa-bag-shopping fa-lg" ></i>
+                    <span class="cantidad-producto-bolsa">0</span>
+                </span>
                 <a title = "Login" href="#"><i class="fa-solid fa-user fa-lg"></i></a>
             </div>
         </nav>
     </header>
-
+    <main class="contenedor-principal-productos">
+        <div class="contenedor-bolsa-compras">
+            <div class="encabezado-bolsa-compras">
+                <p class="titulo-bolsa-compras">Bolsa de Compras</p>
+                <span class="salir-bolsa-compras">&#10006;</span>
+            </div>
+            <div class="ventana-carrito-compras" hidden></div>
+            <div class="resumen-bolsa-compras">
+                <span class="titulo-total-compra">Total Compra</span>
+                <span class="valor-bolsa-compras"></span>
+            </div>
+            <div class="contenedor-btn-continuar-pago">
+                <a id="link-pago" href="pago.html">Ir a Pagar</a>
+            </div>
+        </div>
         <div id="nuestros-productos" class="contenedor-seccion">
             <h2 id="producto">Nuestros Productos</h2>
-            <div id="row">
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/mesa-redonda.png" class="tam-image" width="200" height="220" alt="Mesedora"><p>Mesa Sencilla</p><p>$&nbsp;899</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/silla.png" class="tam-image" width="200" height="220" alt="Silla Tradicional"><p>Silla Tradicional</p><p>$&nbsp;592</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/mueble1.png" class="tam-image" width="200" height="220" alt="Mueble Plateado"><p>Mueble Plateado</p><p>$&nbsp;1.296</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/muebleCeleste.png" class="tam-image" width="200" height="220" alt="mueble cesleste"><p>Mueble Celeste</p><p>$&nbsp;1.792</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/sofaNegro.png" class="tam-image" width="200" height="220" alt="sofaNegro"><p>Sofa Negro</p><p>$&nbsp;1.380</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/cama.png" class="tam-image" width="200" height="220" alt="cama"><p>Cama Doble</p><p>$&nbsp;1.639</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/zapatero.png" class="tam-image" width="200" height="220" alt="zapatero"><p>Zapatero Recibidor</p><p>$&nbsp;625</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/salaModular.png" class="tam-image" width="200" height="220" alt="salaModular"><p>Sala Modular</p><p>$&nbsp;2.580</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/mesa-redonda.png" class="tam-image" width="200" height="220" alt="Mesedora"><p>Mesa Sencilla</p><p>$&nbsp;899</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/silla.png" class="tam-image" width="200" height="220" alt="Silla Tradicional"><p>Silla Tradicional</p><p>$&nbsp;592</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
-                <div class="col-md-5"><div class="contenedor-items"><img src="./img/mueble1.png" class="tam-image" width="200" height="220" alt="Mueble Plateado"><p>Mueble Plateado</p><p>$&nbsp;1.296</p><button class="btn-añadir-carrito">Añadir al Carrito</button></div></div>
+            <div class="row">
+                <div class="col-md-4"><div class="contenedor-articulo"><div class="contenedor-foto-articulo"><img src="./img/mesa-redonda.png" class=" foto-articulo"  width="200" height="220" alt="Mesedora"></div><div class="contenedor-descripcion-articulo"><h4 class="titulo-articulo">Mesa Sencilla</h4><p class="referencia-articulo">Ref. 30001</p><span class="precio-moneda">$</span><span class="precio-articulo">899</p></div><button class="btn-agregar-articulo">Agregar al Carrito</button></div></div>
+                <div class="col-md-4"><div class="contenedor-articulo"><div class="contenedor-foto-articulo"><img src="./img/silla.png" class="foto-articulo"  width="200" height="220" alt="Silla Tradicional"></div><div class="contenedor-descripcion-articulo"><h4 class="titulo-articulo">Silla Tradicional</h4><p class="referencia-articulo">Ref. 30002</p><span class="precio-moneda">$</span><span class="precio-articulo">592</p></div><button class="btn-agregar-articulo">Agregar al Carrito</button></div></div>
+                <div class="col-md-4"><div class="contenedor-articulo"><div class="contenedor-foto-articulo"><img src="./img/mueble1.png" class="foto-articulo"  width="200" height="220" alt="Mueble Plateado"></div><div class="contenedor-descripcion-articulo"><h4 class="titulo-articulo">Mueble Plateado</h4><p class="referencia-articulo">Ref. 30003</p><span class="precio-moneda">$</span><span class="precio-articulo">1.296</p></div><button class="btn-agregar-articulo">Agregar al Carrito</button></div></div>
+                <div class="col-md-4"><div class="contenedor-articulo"><div class="contenedor-foto-articulo"><img src="./img/muebleCeleste.png" class="foto-articulo"  width="200" height="220" alt="mueble cesleste"></div><div class="contenedor-descripcion-articulo"><h4 class="titulo-articulo">Mueble Celeste</h4><p class="referencia-articulo">Ref. 30004</p><span class="precio-moneda">$</span><span class="precio-articulo">1.792</p></div><button class="btn-agregar-articulo">Agregar al Carrito</button></div></div>
+                <div class="col-md-4"><div class="contenedor-articulo"><div class="contenedor-foto-articulo"><img src="./img/sofaNegro.png" class="foto-articulo"  width="200" height="220" alt="sofaNegro"></div><div class="contenedor-descripcion-articulo"><h4 class="titulo-articulo">Sofa Negro</h4><p class="referencia-articulo">Ref. 30005</p><span class="precio-moneda">$</span><span class="precio-articulo">1.380</p></div><button class="btn-agregar-articulo">Agregar al Carrito</button></div></div>
+                <div class="col-md-4"><div class="contenedor-articulo"><div class="contenedor-foto-articulo"><img src="./img/cama.png" class="foto-articulo"  width="200" height="220" alt="cama"></div><div class="contenedor-descripcion-articulo"><h4 class="titulo-articulo">Cama Doble</h4><p class="referencia-articulo">Ref. 30006</p><span class="precio-moneda">$</span><span class="precio-articulo">1.639</p></div><button class="btn-agregar-articulo">Agregar al Carrito</button></div></div>
+                <div class="col-md-4"><div class="contenedor-articulo"><div class="contenedor-foto-articulo"><img src="./img/zapatero.png" class="foto-articulo"  width="200" height="220" alt="zapatero"></div><div class="contenedor-descripcion-articulo"><h4 class="titulo-articulo">Zapatero Recibidor</h4><p class="referencia-articulo">Ref. 30007</p><span class="precio-moneda">$</span><span class="precio-articulo">625</p></div><button class="btn-agregar-articulo">Agregar al Carrito</button></div></div>
+                <div class="col-md-4"><div class="contenedor-articulo"><div class="contenedor-foto-articulo"><img src="./img/salaModular.png" class="foto-articulo"  width="200" height="220" alt="salaModular"></div><div class="contenedor-descripcion-articulo"><h4 class="titulo-articulo">Sala Modular</h4><p class="referencia-articulo">Ref. 30008</p><span class="precio-moneda">$</span><span class="precio-articulo">2.580</p></div><button class="btn-agregar-articulo">Agregar al Carrito</button></div></div>
+                <div class="col-md-4"><div class="contenedor-articulo"><div class="contenedor-foto-articulo"><img src="./img/mueble-rojo.png" class="foto-articulo"  width="200" height="220" alt="Mueble"></div><div class="contenedor-descripcion-articulo"><h4 class="titulo-articulo">Sofa Clásico</h4><p class="referencia-articulo">Ref. 30009</p><span class="precio-moneda">$</span><span class="precio-articulo">1.689</p></div><button class="btn-agregar-articulo">Agregar al Carrito</button></div></div>
+                <div class="col-md-4"><div class="contenedor-articulo"><div class="contenedor-foto-articulo"><img src="./img/comoda Madera.png" class="foto-articulo"  width="200" height="220" alt="Silla Tradicional"></div><div class="contenedor-descripcion-articulo"><h4 class="titulo-articulo">Organizador</h4><p class="referencia-articulo">Ref. 300010</p><span class="precio-moneda">$</span><span class="precio-articulo">592</p></div><button class="btn-agregar-articulo">Agregar al Carrito</button></div></div>
+                <div class="col-md-4"><div class="contenedor-articulo"><div class="contenedor-foto-articulo"><img src="./img/mueble1.png" class="foto-articulo"  width="200" height="220" alt="Mueble Plateado"></div><div class="contenedor-descripcion-articulo"><h4 class="titulo-articulo">Mueble Plateado</h4><p class="referencia-articulo">Ref. 300011</p><span class="precio-moneda">$</span><span class="precio-articulo">1.296</p></div><button class="btn-agregar-articulo">Agregar al Carrito</button></div></div>
+                <div class="col-md-4"><div class="contenedor-articulo"><div class="contenedor-foto-articulo"><img src="./img/sofa_cama_multi.png" class="foto-articulo"  width="200" height="220" alt="Mueble Plateado"></div><div class="contenedor-descripcion-articulo"><h4 class="titulo-articulo">Sofa Cama</h4><p class="referencia-articulo">Ref. 300012</p><span class="precio-moneda">$</span><span class="precio-articulo">1.350</p></div><button class="btn-agregar-articulo">Agregar al Carrito</button></div></div>
             </div>
         </div>
-
-
+    </main>
     <footer>
-        <div>
-            <div>
-                <h2><a id="contacto">Contáctanos</a></h2>
-                    <p><i class="fa-brands fa-facebook-square fa-2xl"></i>Facebook</p>
-                    <p><i class="fa-brands fa-whatsapp-square fa-2xl"></i>Whatsapp</p>
-                    <p><i class="fa-brands fa-instagram-square fa-2xl"></i>Instagram</p>
+        <div class="contenedor-secciones-footer">
+            <div class="footer-contactanos">
+                <div>
+                    <h6 id="contacto" class="titulo-seccion-footer">Contáctanos</h6>
+                </div>   
+                <div class="cuerpo-seccion-footer">
+                    <p>Tiendas</p>
+                    <p>Servicio al cliente</p>
+                    <p>Preguntas Frecuentes</p>
+                    <p>Sigue tus pedidos</p>
+                </div>
             </div>
-            <p> &copy; Todos derechos reservados 2022 </p> 
+            <div class="footer-acerca-de">
+                <div>
+                    <h6 class="titulo-seccion-footer">Acerca de Mublure</h6>
+                </div>
+                <div class="cuerpo-seccion-footer">
+                    <p>Quienes Somos</p>
+                    <p>Responsabilidad Social</p>
+                    <p>Trabaja con Nosotros</p>
+                    <p>Programa Factor Sorpresa</p>
+                    <p>Tu primer Hogar</p>
+                    <p>Marcas Propias</p>
+                    <p class="negrita-subrayado">Día sin IVA</p>
+                </div>
+            </div>
+            <div class="footer-permitenos-ayudarte">
+                <div>
+                    <h6 class="titulo-seccion-footer">Permítenos Ayudarte</h6>
+                </div>
+                <div class="cuerpo-seccion-footer">
+                    <p class="negrita-subrayado">Términos y Condiciones</p>
+                    <p>Estado de los Pedidos</p>
+                    <p>Ventas Institucionales</p>
+                    <p>Superintendencia de Industria y Comercio SIC</p>
+                    <p id="como-comprar">Cómo Comprar</p>
+                </div>
+            </div>
+            <div class="footer-comunicacion">
+                <div id="titulo-subscribir-corrreo">
+                    <p>Recibe Novedadades, Ofertas y Catálogos</p>
+                </div>
+                <div>
+                    <input id="input-subscribirse-footer" type="email" placeholder="E-mail">
+                    <i class="fa-solid fa-envelope"></i> 
+                </div>
+                <div id="contenedor-terminos-condiciones">
+                        <span>Acepto <span class="negrita-subrayado">Términos y Condiciones</span> y Autorizo el Tratamiento de <span class="negrita-subrayado">Datos Personales</span></span>
+                        <input type="checkbox"> 
+                </div>
+                <div>
+                    <i class="fa-brands fa-facebook-square fa-2xl"></i>
+                    <i class="fa-brands fa-whatsapp-square fa-2xl"></i>
+                    <i class="fa-brands fa-youtube-square fa-2xl"></i>
+                    <i class="fa-brands fa-instagram-square fa-2xl"></i>
+                    <i class="fa-brands fa-pinterest-square fa-2xl"></i>
+                </div>
+            </div>
         </div>
+        <div id="creditos">
+            <p> &copy; Todos derechos reservados 2022</p>
+            <p>Elaborado por LC</p> 
+        </div>  
     </footer>
 </body>
 </html>
