@@ -12,7 +12,6 @@
     let productosAgregados = [];
     let valorTotalCompra = 0;
 
-    
     productos.addEventListener('click', (e) => {
         if (e.target.classList.contains('btn-agregar-articulo')) {
             contadorProductos++;
